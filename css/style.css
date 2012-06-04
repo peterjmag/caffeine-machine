@@ -71,9 +71,108 @@ td { vertical-align: top; }
 
 
 /* ===== Primary Styles ========================================================
-   Author:
+   Author: Peter Magenheimer
    ========================================================================== */
 
+#machine {
+  width: 100%;
+  height: 800px;
+  margin-top: 300px;
+  -webkit-perspective: 800;
+  -webkit-perspective-origin: 50% 165px;
+}
+
+.reel {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  padding: 0;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin {
+  0%   { -webkit-transform: rotateX(0); }
+  97%  { -webkit-transform: rotateX(-3632deg); }
+  100% { -webkit-transform: rotateX(-3630deg); }
+}
+
+#reel-1 {
+  top: 120px;
+  left: -120px;
+  -webkit-animation-duration: 4s;
+}
+
+#reel-3 {
+  top: -120px;
+  right: -120px;
+  -webkit-animation-duration: 5.5s;
+}
+
+.reel li {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #AAA;
+  margin: 10px 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.reel .item-01 {
+  -webkit-transform: translateZ(200px);
+}
+
+.reel .item-02 {
+  -webkit-transform: rotateX(30deg) translateZ(200px);
+}
+
+.reel .item-03 {
+  -webkit-transform: rotateX(60deg) translateZ(200px);
+}
+
+.reel .item-04 {
+  -webkit-transform: rotateX(90deg) translateZ(200px);
+}
+
+.reel .item-05 {
+  -webkit-transform: rotateX(120deg) translateZ(200px);
+}
+
+.reel .item-06 {
+  -webkit-transform: rotateX(150deg) translateZ(200px);
+}
+
+.reel .item-07 {
+  -webkit-transform: rotateX(180deg) translateZ(200px);
+}
+
+.reel .item-08 {
+  -webkit-transform: rotateX(210deg) translateZ(200px);
+}
+
+.reel .item-09 {
+  -webkit-transform: rotateX(-120deg) translateZ(200px);
+}
+
+.reel .item-10 {
+  -webkit-transform: rotateX(-90deg) translateZ(200px);
+}
+
+.reel .item-11 {
+  -webkit-transform: rotateX(300deg) translateZ(200px);
+}
+
+.reel .item-12 {
+  -webkit-transform: rotateX(330deg) translateZ(200px);
+}
 
 
 
