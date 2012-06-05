@@ -89,18 +89,14 @@ td { vertical-align: top; }
   padding: 0;
   margin: 0 auto;
   -webkit-transform-style: preserve-3d;
-  -webkit-animation-name: spin;
   -webkit-animation-duration: 5s;
-  -webkit-animation-delay: 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes spin {
-  0%   { -webkit-transform: rotateX(0); }
-  97%  { -webkit-transform: rotateX(-3632deg); }
-  100% { -webkit-transform: rotateX(-3630deg); }
+.reel.active {
+  -webkit-animation-name: spin;
 }
 
 #reel-1 {
