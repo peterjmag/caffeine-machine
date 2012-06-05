@@ -95,14 +95,22 @@ td { vertical-align: top; }
   -webkit-animation-fill-mode: forwards;
 }
 
-.reel.active {
-  -webkit-animation-name: spin;
-}
-
 #reel-1 {
   top: 120px;
   left: -120px;
   -webkit-animation-duration: 4s;
+}
+
+#reel-1.active {
+  -webkit-animation-name: reel-1-spin;
+}
+
+#reel-2.active {
+  -webkit-animation-name: reel-2-spin;
+}
+
+#reel-3.active {
+  -webkit-animation-name: reel-3-spin;
 }
 
 #reel-3 {
