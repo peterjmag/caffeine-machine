@@ -74,10 +74,25 @@ td { vertical-align: top; }
    Author: Peter Magenheimer
    ========================================================================== */
 
+#spin {
+  position: absolute;
+  top: 140px;
+  left: 60px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-decoration: none;
+  background: #0F0;
+  border-radius: 50px;
+}
+
 #machine {
-  width: 100%;
+  position: relative;
+  width: 900px;
   height: 800px;
-  margin-top: 300px;
+  margin: 150px auto 0;
   -webkit-perspective: 800;
   -webkit-perspective-origin: 50% 165px;
 }
