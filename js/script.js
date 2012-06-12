@@ -3,27 +3,32 @@
 */
 
 $(document).ready(function() {
-    $('head').append($('<style id="keyframes"/>'))
+    $('head').append($('<style id="keyframes"/>'));
+
     $('#spin').click(function() {
         $('.reel').removeClass('active');
-        var end_degrees = []
-        var bounce = []
-        while(end_degrees.length < 3){
-            var rand_degrees = (Math.floor(Math.random()*12) * 30) + 3600;
-            var rand_bounce = Math.floor(Math.random()*14) + rand_degrees;
-            end_degrees.push(rand_degrees);
-            bounce.push(rand_bounce);
+
+        var slot_types = ['coffee', 'tea', 'espresso'];
+        var reel_params = [];
+        while(reel_params.length < 3) {
+            var reel = [];
+            reel['end_slot'] = Math.floor(Math.random()*12) + 1;
+            reel['end_slot_type'] = slot_types[(reel['end_slot'] % 3)];
+            reel['end_degrees'] = (reel['end_slot'] * 30) + 3600;
+            reel['bounce'] = Math.floor(Math.random()*14) + reel['end_degrees'];
+            reel_params.push(reel);
         }
+
         $('#keyframes').text("\
             @-webkit-keyframes reel-1-spin {\
                 0% {\
                     -webkit-transform: rotateX(0);\
                 }\
                 97% {\
-                    -webkit-transform: rotateX(-" + bounce[0] + "deg);\
+                    -webkit-transform: rotateX(-" + reel_params[0]['bounce'] + "deg);\
                 }\
                 100% {\
-                    -webkit-transform: rotateX(-" + end_degrees[0] + "deg);\
+                    -webkit-transform: rotateX(-" + reel_params[0]['end_degrees'] + "deg);\
                 }\
             }\
             @-webkit-keyframes reel-2-spin {\
@@ -31,10 +36,10 @@ $(document).ready(function() {
                     -webkit-transform: rotateX(0);\
                 }\
                 97% {\
-                    -webkit-transform: rotateX(-" + bounce[1] + "deg);\
+                    -webkit-transform: rotateX(-" + reel_params[1]['bounce'] + "deg);\
                 }\
                 100% {\
-                    -webkit-transform: rotateX(-" + end_degrees[1] + "deg);\
+                    -webkit-transform: rotateX(-" + reel_params[1]['end_degrees'] + "deg);\
                 }\
             }\
             @-webkit-keyframes reel-3-spin {\
@@ -42,13 +47,14 @@ $(document).ready(function() {
                     -webkit-transform: rotateX(0);\
                 }\
                 97% {\
-                    -webkit-transform: rotateX(-" + bounce[2] + "deg);\
+                    -webkit-transform: rotateX(-" + reel_params[2]['bounce'] + "deg);\
                 }\
                 100% {\
-                    -webkit-transform: rotateX(-" + end_degrees[2] + "deg);\
+                    -webkit-transform: rotateX(-" + reel_params[2]['end_degrees'] + "deg);\
                 }\
             }\
             ");
+
         $('.reel').addClass('active');
     });
 });
