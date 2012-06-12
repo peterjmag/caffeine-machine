@@ -193,6 +193,15 @@ td { vertical-align: top; }
   -webkit-transform: rotateX(330deg) translateZ(200px);
 }
 
+#results {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  width: 160px;
+  min-height: 100px;
+  background: #DDD;
+  padding: 20px;
+}
 
 
 

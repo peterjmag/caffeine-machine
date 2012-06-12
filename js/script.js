@@ -63,7 +63,9 @@ function get_results(event) {
     var r2 = event.data.reel_params[1]['end_slot_type'];
     var r3 = event.data.reel_params[2]['end_slot_type'];
     if ((r1 == r2) && (r1 == r3)) {
-        alert("woohoo!");
+        $('#results').text('Congratulations! You get a ' + r1 + '!');
+    } else {
+        $('#results').text('Try again.');
     };
 }
 
