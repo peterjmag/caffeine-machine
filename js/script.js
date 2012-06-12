@@ -2,6 +2,15 @@
 
 */
 
+function get_results(event) {
+    var r1 = event.data.reel_params[0]['end_slot_type'];
+    var r2 = event.data.reel_params[1]['end_slot_type'];
+    var r3 = event.data.reel_params[2]['end_slot_type'];
+    if ((r1 == r2) && (r1 == r3)) {
+        alert("woohoo!");
+    };
+}
+
 $(document).ready(function() {
     $('head').append($('<style id="keyframes"/>'));
 
@@ -56,6 +65,9 @@ $(document).ready(function() {
             ");
 
         $('.reel').addClass('active');
+
+        $("#reel-3").unbind('animationend webkitAnimationEnd')
+            .bind('animationend webkitAnimationEnd', {reel_params: reel_params}, get_results);
     });
 });
 
