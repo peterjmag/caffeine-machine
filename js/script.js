@@ -3,6 +3,7 @@
 */
 
 function spin_reels() {
+    $('#keyframes').empty();
     $('.reel').removeClass('active');
 
     var slot_types = ['coffee', 'tea', 'espresso'];
@@ -16,41 +17,9 @@ function spin_reels() {
         reel_params.push(reel);
     }
 
-    $('#keyframes').text("\
-        @-webkit-keyframes reel-1-spin {\
-            0% {\
-                -webkit-transform: rotateX(0);\
-            }\
-            97% {\
-                -webkit-transform: rotateX(-" + reel_params[0]['bounce'] + "deg);\
-            }\
-            100% {\
-                -webkit-transform: rotateX(-" + reel_params[0]['end_degrees'] + "deg);\
-            }\
-        }\
-        @-webkit-keyframes reel-2-spin {\
-            0% {\
-                -webkit-transform: rotateX(0);\
-            }\
-            97% {\
-                -webkit-transform: rotateX(-" + reel_params[1]['bounce'] + "deg);\
-            }\
-            100% {\
-                -webkit-transform: rotateX(-" + reel_params[1]['end_degrees'] + "deg);\
-            }\
-        }\
-        @-webkit-keyframes reel-3-spin {\
-            0% {\
-                -webkit-transform: rotateX(0);\
-            }\
-            97% {\
-                -webkit-transform: rotateX(-" + reel_params[2]['bounce'] + "deg);\
-            }\
-            100% {\
-                -webkit-transform: rotateX(-" + reel_params[2]['end_degrees'] + "deg);\
-            }\
-        }\
-        ");
+    $('#keyframes').append(keyframe_rule('reel-1-spin', reel_params[0]),
+                           keyframe_rule('reel-2-spin', reel_params[1]),
+                           keyframe_rule('reel-3-spin', reel_params[2]));
 
     $('.reel').addClass('active');
 
@@ -67,6 +36,16 @@ function get_results(event) {
     } else {
         $('#results').text('Try again.');
     };
+}
+
+function keyframe_rule(name, params) {
+    var rule = "\
+        @-webkit-keyframes " + name + " {\
+            0% { -webkit-transform: rotateX(0); }\
+            97% { -webkit-transform: rotateX(-" + params['bounce'] + "deg); }\
+            100% { -webkit-transform: rotateX(-" + params['end_degrees'] + "deg); }\
+        }";
+    return rule;
 }
 
 $(document).ready(function() {
