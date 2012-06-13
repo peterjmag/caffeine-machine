@@ -83,7 +83,7 @@ body {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  padding: 150px 50px 0;
+  padding: 150px 50px;
 }
 
 header {
@@ -132,7 +132,7 @@ h1 .line-3 {
 #machine {
   position: relative;
   width: 500px;
-  height: 800px;
+  height: 400px;
   margin: 0 auto;
   -webkit-perspective: 800;
   -webkit-perspective-origin: 50% 165px;
