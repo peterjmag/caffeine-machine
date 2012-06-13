@@ -74,10 +74,45 @@ td { vertical-align: top; }
    Author: Peter Magenheimer
    ========================================================================== */
 
-#spin {
+body {
+  color: #EED5C1;
+  background: #9F1316;
+}
+
+header {
   position: absolute;
-  top: 140px;
-  left: 60px;
+  top: 130px;
+  left: 100px;
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  font: 55px/70px "reklame-script", "Brush Script MT", sans-serif;
+  text-shadow: 0 -1px 0 #000;
+  margin-top: -25px;
+  -webkit-transform: rotate(-10deg);
+}
+
+h1 span {
+  position: relative;
+  display: block;
+}
+
+h1 .line-1 {
+  right: 80px;
+}
+
+h1 .line-2 {
+  font-size: 100px;
+  margin-bottom: 15px;
+}
+
+h1 .line-3 {
+  left: 50px;
+}
+
+#spin {
   display: block;
   width: 100px;
   height: 100px;
@@ -86,11 +121,12 @@ td { vertical-align: top; }
   text-decoration: none;
   background: #0F0;
   border-radius: 50px;
+  margin: 0 auto;
 }
 
 #machine {
   position: relative;
-  width: 900px;
+  width: 500px;
   height: 800px;
   margin: 150px auto 0;
   -webkit-perspective: 800;
@@ -199,10 +235,9 @@ td { vertical-align: top; }
 #results {
   position: absolute;
   top: 140px;
-  right: 0;
+  right: -230px;
   width: 160px;
   min-height: 100px;
-  background: #DDD;
   padding: 20px;
 }
 
