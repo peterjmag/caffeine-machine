@@ -82,6 +82,7 @@ body {
 #container {
   position: relative;
   width: 1200px;
+  background: url("img/gray-bar.png") scroll repeat-y center top;
   margin: 0 auto;
   padding: 150px 50px;
 }
