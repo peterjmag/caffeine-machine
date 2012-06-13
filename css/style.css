@@ -145,7 +145,7 @@ h1 .line-3 {
   height: 400px;
   padding-left: 20px;
   margin: 0 auto;
-  -webkit-perspective: 800;
+  -webkit-perspective: 1000;
   -webkit-perspective-origin: 50% 165px;
 }
 
