@@ -130,6 +130,15 @@ h1 .line-3 {
   margin: 0 auto;
 }
 
+#reel-bg {
+  position: absolute;
+  top: 114px;
+  left: 399px;
+  width: 500px;
+  height: 435px;
+  background: url("img/reel-3d-bg.png") no-repeat scroll center center;
+}
+
 #machine {
   position: relative;
   width: 500px;
