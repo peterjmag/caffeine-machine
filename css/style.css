@@ -139,10 +139,13 @@ td { vertical-align: top; }
   display: block;
   width: 100px;
   height: 100px;
-  background: #AAA;
   margin: 10px 0;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
+}
+
+.reel li img {
+  max-width: 100px;
 }
 
 .reel .item-01 {
