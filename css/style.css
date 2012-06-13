@@ -133,6 +133,7 @@ h1 .line-3 {
   position: relative;
   width: 500px;
   height: 400px;
+  padding-left: 20px;
   margin: 0 auto;
   -webkit-perspective: 800;
   -webkit-perspective-origin: 50% 165px;
