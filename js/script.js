@@ -2,20 +2,13 @@
 
 */
 
+var slot_types = ['coffee', 'tea', 'espresso'];
+
 function spin_reels() {
     $('#keyframes').empty();
     $('.reel').removeClass('active');
 
-    var slot_types = ['coffee', 'tea', 'espresso'];
-    var reel_params = [];
-    while(reel_params.length < 3) {
-        var reel = [];
-        reel['end_slot'] = Math.floor(Math.random()*12) + 1;
-        reel['end_slot_type'] = slot_types[(reel['end_slot'] % 3)];
-        reel['end_degrees'] = (reel['end_slot'] * 30) + 3600;
-        reel['bounce'] = Math.floor(Math.random()*14) + reel['end_degrees'];
-        reel_params.push(reel);
-    }
+    var reel_params = get_reel_params();
 
     $('#keyframes').append(keyframe_rule('reel-1-spin', reel_params[0]),
                            keyframe_rule('reel-2-spin', reel_params[1]),
@@ -25,6 +18,19 @@ function spin_reels() {
 
     $("#reel-3").unbind('animationend webkitAnimationEnd')
         .bind('animationend webkitAnimationEnd', {reel_params: reel_params}, get_results);
+}
+
+function get_reel_params() {
+    var reel_params = [];
+    while(reel_params.length < 3) {
+        var reel = [];
+        reel['end_slot'] = Math.floor(Math.random()*12) + 1;
+        reel['end_slot_type'] = slot_types[(reel['end_slot'] % 3)];
+        reel['end_degrees'] = (reel['end_slot'] * 30) + 3600;
+        reel['bounce'] = Math.floor(Math.random()*14) + reel['end_degrees'];
+        reel_params.push(reel);
+    }
+    return reel_params;
 }
 
 function get_results(event) {
