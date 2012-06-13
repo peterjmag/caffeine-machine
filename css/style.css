@@ -76,7 +76,7 @@ td { vertical-align: top; }
 
 body {
   color: #EED5C1;
-  background: #A7070B;
+  background: #A7070B url("img/red-texture.png") repeat scroll top left;
 }
 
 #container {
