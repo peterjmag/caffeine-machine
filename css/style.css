@@ -191,7 +191,6 @@ h1 .line-3 {
   display: block;
   width: 100px;
   height: 100px;
-  background: #FFF;
   margin: 10px 0;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
