@@ -256,8 +256,13 @@ h1 .line-3 {
   right: 50px;
   width: 300px;
   min-height: 100px;
+  text-align: center;
 }
 
+#results img {
+  display: block;
+  background: url("img/win-bg.png") scroll no-repeat center center;
+}
 
 
 
