@@ -88,7 +88,9 @@ body {
 }
 
 header {
-  float: left;
+  position: absolute;
+  top: 150px;
+  left: 50px;
   width: 300px;
   text-align: center;
 }
@@ -250,11 +252,10 @@ h1 .line-3 {
 
 #results {
   position: absolute;
-  top: 140px;
-  right: -230px;
-  width: 160px;
+  top: 150px;
+  right: 50px;
+  width: 300px;
   min-height: 100px;
-  padding: 20px;
 }
 
 
