@@ -6,7 +6,7 @@ var slot_types = ['coffee', 'tea', 'espresso'];
 
 function spin_reels() {
     $('#keyframes').empty();
-    $('.reel').removeClass('active');
+    $('.reel, #results *').removeClass('active');
 
     var reel_params = get_reel_params();
 
@@ -38,10 +38,9 @@ function get_results(event) {
     var r2 = event.data.reel_params[1]['end_slot_type'];
     var r3 = event.data.reel_params[2]['end_slot_type'];
     if ((r1 == r2) && (r1 == r3)) {
-        $('#results').html('<p>Congratulations! You\'ve won some</p>')
-            .append('<img src="img/' + r1 + '.png" alt="' + r1 + '">');
+        $('.win, .' + r1).addClass('active');
     } else {
-        $('#results').html('<p>Try again.</p>');
+        $('.lose').addClass('active');
     };
 }
 

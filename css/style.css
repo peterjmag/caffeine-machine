@@ -259,9 +259,17 @@ h1 .line-3 {
   text-align: center;
 }
 
+#results div {
+  display: none;
+}
+
 #results img {
-  display: block;
+  display: none;
   background: url("img/win-bg.png") scroll no-repeat center center;
+}
+
+#results .active {
+  display: block;
 }
 
 
