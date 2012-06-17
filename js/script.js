@@ -58,7 +58,7 @@ function keyframe_rule(name, params) {
 $(document).ready(function() {
     $('head').append($('<style id="keyframes"/>'));
 
-    $('#spin').click(spin_reels);
+    $('.spin').click(spin_reels);
 });
 
 
