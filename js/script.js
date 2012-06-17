@@ -38,6 +38,7 @@ function get_results(event) {
     var r2 = event.data.reel_params[1]['end_slot_type'];
     var r3 = event.data.reel_params[2]['end_slot_type'];
     if ((r1 == r2) && (r1 == r3)) {
+        $('.drink').text(r1);
         $('.win, .' + r1).addClass('active');
     } else {
         $('.lose').addClass('active');
