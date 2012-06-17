@@ -263,15 +263,17 @@ h2 {
 
 #results {
   position: absolute;
-  top: 150px;
+  top: 120px;
   right: 50px;
+  display: table;
   width: 300px;
-  min-height: 100px;
+  height: 430px;
   text-align: center;
 }
 
 #results div {
   display: none;
+  vertical-align: middle;
 }
 
 #results img {
@@ -279,8 +281,16 @@ h2 {
   background: url("img/win-bg.png") scroll no-repeat center center;
 }
 
-#results .active {
+#results div.active {
+  display: table-cell;
+}
+
+#results img.active {
   display: block;
+}
+
+#results p {
+  margin-top: 0;
 }
 
 
