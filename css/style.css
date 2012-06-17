@@ -95,8 +95,14 @@ header {
   text-align: center;
 }
 
+h1, h2 {
+  font-family: "reklame-script", "Brush Script MT", sans-serif;
+  font-weight: normal;
+}
+
 h1 {
-  font: 55px/70px "reklame-script", "Brush Script MT", sans-serif;
+  font-size: 55px;
+  line-height: 70px;
   text-shadow: 0 -1px 0 #000;
   margin-top: -25px;
   -webkit-transform: rotate(-10deg);
@@ -118,6 +124,11 @@ h1 .line-2 {
 
 h1 .line-3 {
   left: 50px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
 }
 
 #spin {
