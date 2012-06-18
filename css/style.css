@@ -310,6 +310,15 @@ button.spin:active {
   margin-top: 0;
 }
 
+a:link,
+a:visited {
+  color: #7FBF4D;
+}
+
+a:hover,
+a:focus {
+  color: #ADE77E;
+}
 
 
 
