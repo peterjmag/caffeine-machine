@@ -318,8 +318,135 @@ a:focus {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1224px) {
+  #container {
+    width: 940px;
+    background-image: url("img/gray-bar-small.png");
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header {
+    left: 36px;
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: -20px;
+  }
+
+  h1 .line-1 {
+    right: 60px;
+  }
+
+  h1 .line-2 {
+    font-size: 76px;
+    margin-bottom: 15px;
+  }
+
+  h1 .line-3 {
+    left: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  button.spin {
+    font-size: 18px;
+  }
+
+  #machine {
+    width: 398px;
+    height: 346px;
+    background-image: url("img/reel-3d-bg-small.png");
+    padding-top: 48px;
+  }
+
+  .reel {
+    height: 100px;
+    width: 100px;
+  }
+
+  #reel-1 {
+    top: 100px;
+    left: -95px;
+  }
+
+  #reel-3 {
+    top: -100px;
+    right: -95px;
+  }
+
+  .reel li {
+    width: 80px;
+    height: 80px;
+  }
+
+  .reel li img {
+    width: 100%;
+  }
+
+  .reel .item-01 {
+    -webkit-transform: translateZ(160px);
+  }
+
+  .reel .item-02 {
+    -webkit-transform: rotateX(30deg) translateZ(160px);
+  }
+
+  .reel .item-03 {
+    -webkit-transform: rotateX(60deg) translateZ(160px);
+  }
+
+  .reel .item-04 {
+    -webkit-transform: rotateX(90deg) translateZ(160px);
+  }
+
+  .reel .item-05 {
+    -webkit-transform: rotateX(120deg) translateZ(160px);
+  }
+
+  .reel .item-06 {
+    -webkit-transform: rotateX(150deg) translateZ(160px);
+  }
+
+  .reel .item-07 {
+    -webkit-transform: rotateX(180deg) translateZ(160px);
+  }
+
+  .reel .item-08 {
+    -webkit-transform: rotateX(210deg) translateZ(160px);
+  }
+
+  .reel .item-09 {
+    -webkit-transform: rotateX(240deg) translateZ(160px);
+  }
+
+  .reel .item-10 {
+    -webkit-transform: rotateX(270deg) translateZ(160px);
+  }
+
+  .reel .item-11 {
+    -webkit-transform: rotateX(300deg) translateZ(160px);
+  }
+
+  .reel .item-12 {
+    -webkit-transform: rotateX(330deg) translateZ(160px);
+  }
+
+  #results {
+    width: 220px;
+    height: 320px;
+    right: 36px;
+  }
+
+  #results img {
+    max-width: 100%;
+    background-image: url("img/win-bg-small.png");
+  }
 }
 
 /* =============================================================================
