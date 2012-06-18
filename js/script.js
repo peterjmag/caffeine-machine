@@ -59,6 +59,10 @@ $(document).ready(function() {
     $('head').append($('<style id="keyframes"/>'));
 
     $('.spin').click(spin_reels);
+
+    $('#hyperspeed').change(function() {
+        $('body').toggleClass('hyperspeed')
+    });
 });
 
 

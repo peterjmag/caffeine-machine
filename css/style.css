@@ -208,6 +208,12 @@ button.spin:active {
   -webkit-animation-duration: 5.5s;
 }
 
+body.hyperspeed #reel-1,
+body.hyperspeed #reel-2,
+body.hyperspeed #reel-3 {
+  -webkit-animation-duration: 0.1s;
+}
+
 .reel li {
   position: absolute;
   display: block;
@@ -313,6 +319,21 @@ footer {
   height: 6px;
   background: url("img/chrome-bar.png") scroll no-repeat top center;
   margin: 0 auto;
+}
+
+footer div {
+  position: fixed;
+  bottom: 0;
+  background: rgba(51, 51, 51, 0.7);
+  padding: 0.5em 1em;
+}
+
+.debug {
+  left: 0;
+}
+
+.github {
+  right: 0;
 }
 
 
