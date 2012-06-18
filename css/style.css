@@ -218,10 +218,6 @@ button.spin:active {
   -webkit-backface-visibility: hidden;
 }
 
-.reel li img {
-  max-width: 100px;
-}
-
 .reel .item-01 {
   -webkit-transform: translateZ(200px);
 }
