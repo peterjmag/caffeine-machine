@@ -309,6 +309,10 @@ body.hyperspeed #reel-3 {
   -webkit-backface-visibility: hidden;
      -moz-backface-visibility: hidden;
           backface-visibility: hidden;
+
+  /* 3D aliasing workaround for Firefox
+     http://stackoverflow.com/questions/9235342/3d-css-transform-jagged-edges-in-firefox */
+  outline: 1px solid transparent;
 }
 
 .reel .item-01 {
