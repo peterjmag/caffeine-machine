@@ -364,15 +364,15 @@ body.hyperspeed #reel-3 {
 }
 
 .reel .item-09 {
-  -webkit-transform: rotateX(-120deg) translateZ(200px);
-     -moz-transform: rotateX(-120deg) translateZ(200px);
-          transform: rotateX(-120deg) translateZ(200px);
+  -webkit-transform: rotateX(240deg) translateZ(200px);
+     -moz-transform: rotateX(240deg) translateZ(200px);
+          transform: rotateX(240deg) translateZ(200px);
 }
 
 .reel .item-10 {
-  -webkit-transform: rotateX(-90deg) translateZ(200px);
-     -moz-transform: rotateX(-90deg) translateZ(200px);
-          transform: rotateX(-90deg) translateZ(200px);
+  -webkit-transform: rotateX(270deg) translateZ(200px);
+     -moz-transform: rotateX(270deg) translateZ(200px);
+          transform: rotateX(270deg) translateZ(200px);
 }
 
 .reel .item-11 {
