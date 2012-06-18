@@ -207,12 +207,16 @@ button.spin:active {
   margin: 0 auto;
 
   -webkit-perspective: 1000;
-     -moz-perspective: 1000;
           perspective: 1000;
 
   -webkit-perspective-origin: 50% 235px;
      -moz-perspective-origin: 50% 235px;
           perspective-origin: 50% 235px;
+
+  /* Fix perspective issues in Firefox
+     http://blog.joelambert.co.uk/2012/02/13/3d-transformations-with-firefox-10/ */
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
 }
 
 .reel {
