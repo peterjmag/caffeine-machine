@@ -151,7 +151,7 @@ button.spin:hover,
 button.spin:focus {
   cursor: pointer;
   background-color: #9CE066;
-  background-image: -webkit-linear-gradient(top, #94D65F 0%, #7BD534 50%, #56C400 50%, #49A700 100%);
+  background-image: -webkit-linear-gradient(top, #94D65F 0%, #7BD534 50%, #4EB300 50%, #409400 100%);
 }
 
 button.spin:active {
