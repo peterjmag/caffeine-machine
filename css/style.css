@@ -68,8 +68,6 @@ td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
-
-
 /* ===== Primary Styles ========================================================
    Author: Peter Magenheimer
    ========================================================================== */
@@ -83,8 +81,8 @@ body {
   position: relative;
   width: 1180px;
   background: url("img/gray-bar.png") scroll repeat-y center top;
-  margin: 0 auto;
   padding: 80px 20px 120px;
+  margin: 0 auto;
 }
 
 header {
@@ -94,6 +92,10 @@ header {
   width: 300px;
   text-align: center;
 }
+
+/**
+ * Typography
+ */
 
 h1, h2 {
   font-family: "reklame-script", "Brush Script MT", sans-serif;
@@ -132,6 +134,20 @@ h2 {
   margin: 0;
 }
 
+a:link,
+a:visited {
+  color: #7FBF4D;
+}
+
+a:hover,
+a:focus {
+  color: #ADE77E;
+}
+
+/**
+ * "Give it a spin" button
+ */
+
 button.spin {
   font-size: 20px;
   line-height: 1;
@@ -159,6 +175,10 @@ button.spin:active {
   background-image: -webkit-linear-gradient(top, #71A845 0%, #538A28 50%, #327500 50%, #2C6400 100%);
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4);
 }
+
+/**
+ * Slot machine and reels
+ */
 
 #machine {
   position: relative;
@@ -190,18 +210,6 @@ button.spin:active {
   -webkit-animation-duration: 4s;
 }
 
-#reel-1.active {
-  -webkit-animation-name: reel-1-spin;
-}
-
-#reel-2.active {
-  -webkit-animation-name: reel-2-spin;
-}
-
-#reel-3.active {
-  -webkit-animation-name: reel-3-spin;
-}
-
 #reel-3 {
   top: -120px;
   right: -120px;
@@ -212,6 +220,18 @@ body.hyperspeed #reel-1,
 body.hyperspeed #reel-2,
 body.hyperspeed #reel-3 {
   -webkit-animation-duration: 0.1s;
+}
+
+#reel-1.active {
+  -webkit-animation-name: reel-1-spin;
+}
+
+#reel-2.active {
+  -webkit-animation-name: reel-2-spin;
+}
+
+#reel-3.active {
+  -webkit-animation-name: reel-3-spin;
 }
 
 .reel li {
@@ -272,6 +292,10 @@ body.hyperspeed #reel-3 {
   -webkit-transform: rotateX(330deg) translateZ(200px);
 }
 
+/**
+ * Results text and prize display
+ */
+
 #results {
   position: absolute;
   top: 120px;
@@ -304,15 +328,9 @@ body.hyperspeed #reel-3 {
   margin-top: 0;
 }
 
-a:link,
-a:visited {
-  color: #7FBF4D;
-}
-
-a:hover,
-a:focus {
-  color: #ADE77E;
-}
+/**
+ * Footer
+ */
 
 footer {
   width: 800px;
