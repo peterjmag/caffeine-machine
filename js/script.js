@@ -20,7 +20,7 @@ function spin_reels() {
 
     $('.reel').addClass('active');
 
-    $("#reel-3").unbind('animationend webkitAnimationEnd')
+    $('#reel-3').unbind('animationend webkitAnimationEnd')
         .bind('animationend webkitAnimationEnd', {reel_params: reel_params}, get_results);
 }
 
