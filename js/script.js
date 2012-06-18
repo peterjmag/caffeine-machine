@@ -71,7 +71,18 @@ function keyframe_rule(name, params) {
             0% { -webkit-transform: rotateX(0); }\
             97% { -webkit-transform: rotateX(-" + params['bounce'] + "deg); }\
             100% { -webkit-transform: rotateX(-" + params['end_degrees'] + "deg); }\
-        }";
+        }\
+        @-moz-keyframes " + name + " {\
+            0% { -moz-transform: rotateX(0); }\
+            97% { -moz-transform: rotateX(-" + params['bounce'] + "deg); }\
+            100% { -moz-transform: rotateX(-" + params['end_degrees'] + "deg); }\
+        }\
+        @-keyframes " + name + " {\
+            0% { transform: rotateX(0); }\
+            97% { transform: rotateX(-" + params['bounce'] + "deg); }\
+            100% { transform: rotateX(-" + params['end_degrees'] + "deg); }\
+        }\
+        ";
     return rule;
 }
 

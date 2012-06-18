@@ -107,7 +107,10 @@ h1 {
   line-height: 70px;
   text-shadow: 0 -2px 0 #000;
   margin-top: -25px;
+
   -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 h1 span {
@@ -149,31 +152,46 @@ a:focus {
  */
 
 button.spin {
+  color: #FFF;
   font-size: 20px;
   line-height: 1;
   font-weight: bold;
-  color: #FFF;
   text-align: center;
   text-shadow: 0 -1px 0 #000;
   background-color: #7FBF4D;
-  background-image: -webkit-linear-gradient(top, #7FBF4D 0%, #63A62F 50%, #3E9100 50%, #367A00 100%);
   padding: 12px 1em 14px;
   border: 1px solid #155700;
   border-radius: 5px;
+
+  background-image: -webkit-linear-gradient(top, #7FBF4D 0%, #63A62F 50%, #3E9100 50%, #367A00 100%);
+  background-image: -moz-linear-gradient(top, #7FBF4D 0%, #63A62F 50%, #3E9100 50%, #367A00 100%);
+  background-image: linear-gradient(top, #7FBF4D 0%, #63A62F 50%, #3E9100 50%, #367A00 100%);
+
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4), 0 1px 3px #333;
+     -moz-box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4), 0 1px 3px #333;
+          box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4), 0 1px 3px #333;
 }
 
 button.spin:hover,
 button.spin:focus {
   cursor: pointer;
   background-color: #9CE066;
+
   background-image: -webkit-linear-gradient(top, #94D65F 0%, #7BD534 50%, #4EB300 50%, #409400 100%);
+  background-image: -moz-linear-gradient(top, #94D65F 0%, #7BD534 50%, #4EB300 50%, #409400 100%);
+  background-image: linear-gradient(top, #94D65F 0%, #7BD534 50%, #4EB300 50%, #409400 100%);
 }
 
 button.spin:active {
   background-color: #D43C28;
+
   background-image: -webkit-linear-gradient(top, #71A845 0%, #538A28 50%, #327500 50%, #2C6400 100%);
+  background-image: -moz-linear-gradient(top, #71A845 0%, #538A28 50%, #327500 50%, #2C6400 100%);
+  background-image: linear-gradient(top, #71A845 0%, #538A28 50%, #327500 50%, #2C6400 100%);
+
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4);
+     -moz-box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4);
+          box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4);
 }
 
 /**
@@ -187,8 +205,14 @@ button.spin:active {
   background: url("img/reel-3d-bg.png") no-repeat scroll center center;
   padding: 72px 0 0 22px;
   margin: 0 auto;
+
   -webkit-perspective: 1000;
+     -moz-perspective: 1000;
+          perspective: 1000;
+
   -webkit-perspective-origin: 50% 235px;
+     -moz-perspective-origin: 50% 235px;
+          perspective-origin: 50% 235px;
 }
 
 .reel {
@@ -197,17 +221,35 @@ button.spin:active {
   width: 120px;
   padding: 0;
   margin: 0 auto;
+
   -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+
   -webkit-animation-duration: 5s;
+     -moz-animation-duration: 5s;
+          animation-duration: 5s;
+
   -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+
   -webkit-animation-timing-function: ease;
+     -moz-animation-timing-function: ease;
+          animation-timing-function: ease;
+
   -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #reel-1 {
   top: 120px;
   left: -120px;
+
   -webkit-animation-duration: 4s;
+     -moz-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 #reel-3 {
@@ -224,14 +266,29 @@ body.hyperspeed #reel-3 {
 
 #reel-1.active {
   -webkit-animation-name: reel-1-spin;
+     -moz-animation-name: reel-1-spin;
+          animation-name: reel-1-spin;
 }
 
 #reel-2.active {
   -webkit-animation-name: reel-2-spin;
+     -moz-animation-name: reel-2-spin;
+          animation-name: reel-2-spin;
 }
 
 #reel-3.active {
   -webkit-animation-name: reel-3-spin;
+     -moz-animation-name: reel-3-spin;
+          animation-name: reel-3-spin;
+}
+
+#reel-3 {
+  top: -120px;
+  right: -120px;
+
+  -webkit-animation-duration: 5.5s;
+     -moz-animation-duration: 5.5s;
+          animation-duration: 5.5s;
 }
 
 .reel li {
@@ -240,56 +297,86 @@ body.hyperspeed #reel-3 {
   width: 100px;
   height: 100px;
   margin: 10px 0;
+
   -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+
   -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .reel .item-01 {
   -webkit-transform: translateZ(200px);
+     -moz-transform: translateZ(200px);
+          transform: translateZ(200px);
 }
 
 .reel .item-02 {
   -webkit-transform: rotateX(30deg) translateZ(200px);
+     -moz-transform: rotateX(30deg) translateZ(200px);
+          transform: rotateX(30deg) translateZ(200px);
 }
 
 .reel .item-03 {
   -webkit-transform: rotateX(60deg) translateZ(200px);
+     -moz-transform: rotateX(60deg) translateZ(200px);
+          transform: rotateX(60deg) translateZ(200px);
 }
 
 .reel .item-04 {
   -webkit-transform: rotateX(90deg) translateZ(200px);
+     -moz-transform: rotateX(90deg) translateZ(200px);
+          transform: rotateX(90deg) translateZ(200px);
 }
 
 .reel .item-05 {
   -webkit-transform: rotateX(120deg) translateZ(200px);
+     -moz-transform: rotateX(120deg) translateZ(200px);
+          transform: rotateX(120deg) translateZ(200px);
 }
 
 .reel .item-06 {
   -webkit-transform: rotateX(150deg) translateZ(200px);
+     -moz-transform: rotateX(150deg) translateZ(200px);
+          transform: rotateX(150deg) translateZ(200px);
 }
 
 .reel .item-07 {
   -webkit-transform: rotateX(180deg) translateZ(200px);
+     -moz-transform: rotateX(180deg) translateZ(200px);
+          transform: rotateX(180deg) translateZ(200px);
 }
 
 .reel .item-08 {
   -webkit-transform: rotateX(210deg) translateZ(200px);
+     -moz-transform: rotateX(210deg) translateZ(200px);
+          transform: rotateX(210deg) translateZ(200px);
 }
 
 .reel .item-09 {
-  -webkit-transform: rotateX(240deg) translateZ(200px);
+  -webkit-transform: rotateX(-120deg) translateZ(200px);
+     -moz-transform: rotateX(-120deg) translateZ(200px);
+          transform: rotateX(-120deg) translateZ(200px);
 }
 
 .reel .item-10 {
-  -webkit-transform: rotateX(270deg) translateZ(200px);
+  -webkit-transform: rotateX(-90deg) translateZ(200px);
+     -moz-transform: rotateX(-90deg) translateZ(200px);
+          transform: rotateX(-90deg) translateZ(200px);
 }
 
 .reel .item-11 {
   -webkit-transform: rotateX(300deg) translateZ(200px);
+     -moz-transform: rotateX(300deg) translateZ(200px);
+          transform: rotateX(300deg) translateZ(200px);
 }
 
 .reel .item-12 {
   -webkit-transform: rotateX(330deg) translateZ(200px);
+     -moz-transform: rotateX(330deg) translateZ(200px);
+          transform: rotateX(330deg) translateZ(200px);
 }
 
 /**
