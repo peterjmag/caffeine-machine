@@ -84,7 +84,7 @@ body {
   width: 1200px;
   background: url("img/gray-bar.png") scroll repeat-y center top;
   margin: 0 auto;
-  padding: 150px 50px;
+  padding: 80px 50px 120px;
 }
 
 header {
@@ -160,23 +160,15 @@ button.spin:active {
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(78, 206, 64, 0.4);
 }
 
-#reel-bg {
-  position: absolute;
-  top: 114px;
-  left: 399px;
-  width: 500px;
-  height: 435px;
-  background: url("img/reel-3d-bg.png") no-repeat scroll center center;
-}
-
 #machine {
   position: relative;
   width: 500px;
-  height: 400px;
-  padding-left: 20px;
+  height: 435px;
+  background: url("img/reel-3d-bg.png") no-repeat scroll center center;
+  padding: 72px 0 0 22px;
   margin: 0 auto;
   -webkit-perspective: 1000;
-  -webkit-perspective-origin: 50% 165px;
+  -webkit-perspective-origin: 50% 235px;
 }
 
 .reel {
