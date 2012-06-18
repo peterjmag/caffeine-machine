@@ -81,16 +81,16 @@ body {
 
 #container {
   position: relative;
-  width: 1200px;
+  width: 1180px;
   background: url("img/gray-bar.png") scroll repeat-y center top;
   margin: 0 auto;
-  padding: 80px 50px 120px;
+  padding: 80px 20px 120px;
 }
 
 header {
   position: absolute;
   top: 150px;
-  left: 50px;
+  left: 30px;
   width: 300px;
   text-align: center;
 }
@@ -446,6 +446,18 @@ a:focus {
   #results img {
     max-width: 100%;
     background-image: url("img/win-bg-small.png");
+  }
+}
+
+@media only screen and (min-width: 1385px) {
+  #container {
+    width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  header {
+    left: 50px;
   }
 }
 
