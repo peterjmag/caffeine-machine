@@ -308,6 +308,12 @@ a:focus {
   color: #ADE77E;
 }
 
+footer {
+  width: 800px;
+  height: 6px;
+  background: url("img/chrome-bar.png") scroll no-repeat top center;
+  margin: 0 auto;
+}
 
 
 
