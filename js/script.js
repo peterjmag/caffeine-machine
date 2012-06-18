@@ -77,7 +77,7 @@ function keyframe_rule(name, params) {
             97% { -moz-transform: rotateX(-" + params['bounce'] + "deg); }\
             100% { -moz-transform: rotateX(-" + params['end_degrees'] + "deg); }\
         }\
-        @-keyframes " + name + " {\
+        @keyframes " + name + " {\
             0% { transform: rotateX(0); }\
             97% { transform: rotateX(-" + params['bounce'] + "deg); }\
             100% { transform: rotateX(-" + params['end_degrees'] + "deg); }\
