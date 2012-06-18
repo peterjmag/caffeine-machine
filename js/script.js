@@ -64,9 +64,3 @@ $(document).ready(function() {
         $('body').toggleClass('hyperspeed')
     });
 });
-
-
-
-
-
-
