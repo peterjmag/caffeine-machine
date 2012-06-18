@@ -1,9 +1,13 @@
-/* Author: Peter Magenheimer
-
-*/
+/**
+ * Author: Peter Magenheimer
+ */
 
 var slot_types = ['coffee', 'tea', 'espresso'];
 
+/**
+ * Clear previous spin and get new random reel parameters. Initiate spin and
+ * bind get_results() to animationend event.
+ */
 function spin_reels() {
     $('#keyframes').empty();
     $('.reel, #results *').removeClass('active');
@@ -20,6 +24,12 @@ function spin_reels() {
         .bind('animationend webkitAnimationEnd', {reel_params: reel_params}, get_results);
 }
 
+/**
+ * Generate random spin parameters for three reels.
+ * @return {reel_params} A multi-dimensional array with the following
+ *     parameters for each reel: end_slot, end_slot_type, end_degrees,
+ *     and bounce.
+ */
 function get_reel_params() {
     var reel_params = [];
     while(reel_params.length < 3) {
@@ -33,6 +43,11 @@ function get_reel_params() {
     return reel_params;
 }
 
+/**
+ * Process the spin results. If all three reels match, display the appropriate
+ * victory text and image. If not, display the loss text.
+ * @params {event} The jQuery event object from the bind() in spin_reels().
+ */
 function get_results(event) {
     var r1 = event.data.reel_params[0]['end_slot_type'];
     var r2 = event.data.reel_params[1]['end_slot_type'];
@@ -45,6 +60,11 @@ function get_results(event) {
     };
 }
 
+/**
+ * Generate a CSS @keyframes rule for the spin.
+ * @params {string} The keyframe rule identifier.
+ * @params {array} The random reel parameters to be used.
+ */
 function keyframe_rule(name, params) {
     var rule = "\
         @-webkit-keyframes " + name + " {\
