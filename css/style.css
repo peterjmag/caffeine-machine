@@ -333,7 +333,7 @@ body.hyperspeed #reel-3 {
  */
 
 footer {
-  width: 800px;
+  width: 980px;
   height: 6px;
   background: url("img/chrome-bar.png") scroll no-repeat top center;
   margin: 0 auto;
@@ -486,6 +486,10 @@ footer div {
   #results img {
     max-width: 100%;
     background-image: url("img/win-bg-small.png");
+  }
+
+  footer {
+    background-image: url("img/chrome-bar-small.png");
   }
 }
 
