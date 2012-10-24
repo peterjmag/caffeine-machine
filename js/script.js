@@ -57,7 +57,7 @@ function get_results(event) {
         $('.win, .' + r1).addClass('active');
     } else {
         $('.lose').addClass('active');
-    };
+    }
 }
 
 /**
@@ -81,6 +81,6 @@ $(document).ready(function() {
     $('.spin').click(spin_reels);
 
     $('#hyperspeed').change(function() {
-        $('body').toggleClass('hyperspeed')
+        $('body').toggleClass('hyperspeed');
     });
 });
